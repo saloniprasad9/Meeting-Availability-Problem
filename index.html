@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Availability</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+    <div class="free-time">
+        <h2 class="label">FIND A FREE TIME</h2>
+        </br>
+        <div>
+            <label  class="date-slot"  for="date-slot">Date:</label>
+                <input type="date" id="date-slot" name="date" value="2023-02-16">
+        </div>
+        <div>
+            <label for="start-time-slot">Start Time:</label>
+                <select id="start-time-slot" name="start-time">
+                    <option value="9:30 AM">9:30 AM</option>
+                    <option value="10:30 AM">10:30 AM</option>
+                    <option value="11:30 AM">11:30 AM</option>
+                </select>
+        </div>
+        <div>
+            <label for="duration-slot">Duration:</label>
+                <select id="duration-slot" name="duration">
+                    <option value="30">30 min</option>
+                    <option value="60">60 min</option>
+                    <option value="90">90 min</option>
+                </select>
+        </div>
+        </br>
+        <div class="time-slot-active">
+            <slot class="time-slot1">9:30 AM</slot>
+            <slot class="time-slot2">10:30 AM</slot>
+            <slot class="time-slot3">11:30 AM</slot>
+        </div>
+        </br>
+        <button class="find-button">Find</button>
+        </br>
+        <div>
+            <span class="icon free-icon"></span>
+            <span>Free</span>
+        </div>
+        <div>
+            <span class="icon busy-icon"></span>
+            <span>Busy</span>
+        </div>
+    </div>
+    <script src="index.js"></script> 
+</body>
+</html>
